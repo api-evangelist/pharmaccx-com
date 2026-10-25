@@ -1,25 +1,70 @@
 aid: pharmaccx-com
+
 name: PharmaCCX
-description: 'PharmaCCX is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by accel) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'CCX offers a secure enterprise platform of digital tools purpose‑built for market access and pricing. The platform enables global pharmaceutical companies and payers to plan, model, and execute pricing strategies, synchronize global and local execution, and manage complex contract negotiations. It replaces legacy systems with a single source of truth and provides real‑time intelligence for pharma, payers, and health systems.'
+
 url: https://raw.githubusercontent.com/api-evangelist/pharmaccx-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-25'
+
 modified: '2026-10-25'
+
 tags:
-- Company
-apis: []
+- Market Access
+- Pricing
+- Pharma
+- Payers
+- Digital Negotiation
+- Enterprise Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- accel
+
 common:
+- type: Hosts
+  url: hosts/pharmaccx-com-hosts.yml
+- type: Vendors
+  url: vendors/pharmaccx-com-vendors.yml
+- type: Support
+  url: https://www.ccx.tech/help
+- type: PrivacyPolicy
+  url: https://www.ccx.tech/privacy-policy
+- type: Newsroom
+  url: https://www.ccx.tech/press
+- type: DomainSecurity
+  url: security/pharmaccx-com-domain-security.yml
 - type: Website
   url: http://www.pharmaccx.com
+
+apis: []
+
+x-backed-by:
+- accel
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The provider site presents only marketing HTML with no accessible API documentation.
+  evidence:
+    - url: https://www.ccx.tech
+      status: 200
+  checked: '2026-10-25'
+x-enrichment:
+  date: '2026-10-25'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

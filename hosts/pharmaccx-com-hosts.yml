@@ -1,0 +1,60 @@
+generated: '2026-10-25'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 2
+  other_domain: 2
+  platform: 0
+  roles:
+  - api
+  - support
+  - website
+hosts:
+- host: api.ccx.tech
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: ccx.tech
+  role: api
+  relation: other-domain
+- host: api.pharmaccx.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: pharmaccx.com
+  role: api
+  relation: own
+- host: www.ccx.tech
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Support
+  - PrivacyPolicy
+  - Newsroom
+  serves: []
+  registrable_domain: ccx.tech
+  role: support
+  relation: other-domain
+- host: www.pharmaccx.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: pharmaccx.com
+  role: website
+  relation: own

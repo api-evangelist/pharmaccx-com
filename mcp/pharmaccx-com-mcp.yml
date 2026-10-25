@@ -1,0 +1,12 @@
+generated: '2026-10-25'
+method: none
+source: preflight
+
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: none
+  verified: derived
+# No MCP server discovered for PharmaCCX. Mode set to none.
